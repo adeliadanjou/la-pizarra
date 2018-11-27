@@ -2,14 +2,12 @@ const express = require("express");
 const passport = require('passport');
 const router = express.Router();
 const User = require("../models/User");
+const Subject = require("../models/Subject");
 const { ensureLoggedIn, ensureLoggedOut } = require('connect-ensure-login');
 
 // Bcrypt to encrypt passwords
 const bcrypt = require("bcrypt");
 const bcryptSalt = 10;
-
-//Insatancio el User aqui porque hacemos el Signup en 2 tandas
-//const newUser = new User();
 
 //funciones auxiliares
 
@@ -35,7 +33,14 @@ router.get("/login", ensureLoggedOut(), (req, res, next) => {
 });
 
 router.get("/signup", (req, res, next) => {
-  res.render("auth/signup");
+  Subject.find()
+  .then(subjects=>{
+    //console.log(subjects);
+    res.render("auth/signup", {subjects});
+  })
+  .catch(err => {
+    res.render("auth/signup", { message: "Something went wrong" });
+  })
 });
 
 //Slide
@@ -76,6 +81,7 @@ router.post("/signup", (req, res, next) => {
       return;
     }
 
+    console.log(req.body)
     const salt = bcrypt.genSaltSync(bcryptSalt);
     req.body.password = bcrypt.hashSync(req.body.password, salt);
     //hassPass(req.body.password);

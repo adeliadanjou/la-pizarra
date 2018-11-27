@@ -3,6 +3,9 @@
 // To execute this seed, run from the root of the project
 // $ node bin/seeds.js
 
+//Sed ADMON JUNTAR
+
+
 const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");
 const User = require("../models/User");
@@ -28,12 +31,21 @@ let users = [
     password: bcrypt.hashSync("bob", bcrypt.genSaltSync(bcryptSalt)),
   }
 ]
+// let meeting = [
+//   {
+
+//   },
+//   {
+
+//   }
+// ]
 
 User.deleteMany()
 .then(() => {
   return User.create(users)
 })
 .then(usersCreated => {
+
   console.log(`${usersCreated.length} users created with the following id:`);
   console.log(usersCreated.map(u => u._id));
 })

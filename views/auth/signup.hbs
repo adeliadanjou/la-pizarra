@@ -11,46 +11,49 @@
 <br>
 <hr><br>
 
-
-
-
 <form action="/signup" method="POST" id="form-container">
-  <label for="username">Nombre de usuario</label>
-  <input id="username" type="text" name="username" placeholder="Nombre de usuario">
 
-  <br><br>
+  <div id="first">
+    <label for="username">Nombre de usuario</label>
+    <input id="username" type="text" name="username" placeholder="Nombre de usuario">
+    <br><br>
+    <label for="password">Contraseña</label>
+    <input id="password" type="password" name="password" placeholder="Tu contraseña">
+    <br>
+    <hr><br>
+    <label for="name">Nombre</label>
+    <input id="name" type="name" name="name" placeholder="Nombre">
+    <br><br>
+    <label for="surname">Apellidos</label>
+    <input id="surname" type="surname" name="surname" placeholder="Apellidos">
+    <br><br>
+    <label for="zip">Código postal</label>
+    <input id="zip" type="zip" name="zip" placeholder="Tu código postal">
+    <br><br>
+    <select name="genre">
+      <option value="1">Chica</option>
+      <option value="2">Chico</option>
+      <option value="3">Chique</option>
+    </select>
+    <br><br>
+    <input type="button" name="role" value="SOY ALUMNO" class="button">
+    <input type="button" name="role" value="SOY PROFE" class="button">
+    {{!-- <input type="button" name="next" class="next action-button" value="Next" /> --}}
+  </div>
 
-  <label for="password">Contraseña</label>
-  <input id="password" type="password" name="password" placeholder="Tu contraseña">
-  <br>
+  <div id="second" class="off">
+    {{#each subjects}}
+    <label for="checkbox">{{this.title}}</label>
+    <input type="checkbox" name=subjects value={{this.title}}>
+    {{/each}}
+    {{!-- Recibir en el render de signup (junto con message), una lista
+    con Subject.find para guardar su id con los cheket con su nombre --}}
+
+    <input type="submit" value="submit">
+    {{!-- <input type="button" name="next" class="next action-button" value="Next" /> --}}
+  </div>
 
 
-  <br>
-  <hr><br>
-
-  <label for="name">Nombre</label>
-  <input id="name" type="name" name="name" placeholder="Nombre">
-
-  <br><br>
-
-  <label for="surname">Apellidos</label>
-  <input id="surname" type="surname" name="surname" placeholder="Apellidos">
-
-  <br><br>
-
-  <label for="zip">Código postal</label>
-  <input id="zip" type="zip" name="zip" placeholder="Tu código postal">
-
-  <br><br>
-
-  <select name="genre">
-    <option value="1">Chica</option>
-    <option value="2">Chico</option>
-    <option value="3">Chique</option>
-  </select>
-
-  <br><br>
-  <input type="submit" name="role" value="SOY ALUMNO">
-  <input type="submit" name="role" value="SOY PROFE">
 
 </form>
+<script src="/javascripts/button.js"></script>
