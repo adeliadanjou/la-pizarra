@@ -46,8 +46,7 @@ let users = [
     password: `123`,
     name: `Juan`,
     surname: `Ibarra`,
-    description: `Soy estudiante de arquitectura, estoy en tercero
-      y tengo experiencia dado clases`,
+    description: `Soy estudiante de arquitectura, estoy en tercero y tengo experiencia dado clases`,
     genre: `1`,
     role: `SOY PROFE`,
     subjects: []
@@ -57,8 +56,7 @@ let users = [
     password: `123`,
     name: `Juan`,
     surname: `Ibarra`,
-    description: `Soy estudiante de arquitectura, estoy en tercero
-      y tengo experiencia dado clases`,
+    description: `Soy estudiante de arquitectura, estoy en tercero y tengo experiencia dado clases`,
     genre: `1`,
     role: `SOY ALUMNO`,
     subjects: []
