@@ -5,23 +5,32 @@
   </ul>
 </nav>
 
-{{!-- AMBOS: ID --}}
 
+{{!-- AMBOS: ID --}}
+<div id="meetings"></div>
+
+
+{{!-- //div con un id que sea escuchado por un java 
 <h1>Lista de citas</h1>
 <p>gris-pendiente</p>
 <p>verde-confirmada</p>
-<p>rojo-pasada</p>
+<p>rojo-pasada</p> --}}
 
 {{!-- {{#if eventos}}
 PROBAR CUANDO HAYA EVENTOS meter un partial de event, de un array de User Event--}}
+<h2 class="Prueba">Pide cita: {{id}}</h2>
 
+<form action="/user/main/{{id}}" method="POST">
+  <label>Título</label><br>
+  <input type="text" name="title"><br><br>
+  <button type="submit" id="addMeeting" >Hacer petición</button>
+</form>
 
 {{!-- SOLO PARA PUPILS --}}
 <h1>Encuentra a tu profe</h1>
 <div id="pupil">
   <div id="teachersMap"></div>
   <div id="form-meeting">
-
   </div>
 </div>
 
@@ -30,4 +39,5 @@ PROBAR CUANDO HAYA EVENTOS meter un partial de event, de un array de User Event-
   window.teacherList = {{{teacherStr}}}
 </script>
 
+<script src="/javascripts/addMeeting.js"></script>
 <script src="/javascripts/listTeacherMap.js"></script>

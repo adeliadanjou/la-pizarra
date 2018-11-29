@@ -6,7 +6,8 @@ const subjectSchema = new Schema({
   description: String,
   // pupils: [{type: new Schema.type.ObjectId, ref: 'User'}],
   // theachers: [{type: new Schema.type.ObjectId, ref: 'User'}],
-  imgPath: String
+  imgPath: String,
+  type: {type:String}
 
 });
 
