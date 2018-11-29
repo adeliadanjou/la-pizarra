@@ -7,7 +7,6 @@ router.get('/', (req, res, next) => {
 Subject.find()
 //.then(subjects => res.render('index', {subjects}))
 .then(subjects => {
-  console.log(subjects);
   res.render('index', {subjects});
 })
 .catch(err => {
@@ -15,6 +14,14 @@ Subject.find()
 })
   
 });
+
+router.get('/subjects', (req, res, next) => {
+  Subject.find()
+    .then(subjects => {
+      console.log(subjects)
+      res.render('subjects', {subjects})
+    })
+})
 
 router.use('/', require('./auth'));
 router.use('/', require('./user'));

@@ -45,11 +45,6 @@ router.get("/signup", (req, res, next) => {
 
 //Slide
 
-router.get("/subjects", (req, res, next) => {
-  res.render("subjects");
-});
-
-
 ///LOGIN
 router.post("/login", passport.authenticate("local", {
   successRedirect: "./user/main",

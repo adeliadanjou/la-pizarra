@@ -77,7 +77,7 @@ let subjects = [
   {
     title: `Biología`,
     description:`Ciencia que estudia la estructura de los seres vivos y de sus procesos vitales. Clases enfocadas para todos los cursos y para la EVAU`,
-    imgPath:`https://res.cloudinary.com/dbbsyfpl1/image/upload/v1543492245/Subjects/dna.svg`
+    imgPath:`https://res.cloudinary.com/dbbsyfpl1/image/upload/v1543507748/Subjects/dna-structure.svg`
 
   },
     

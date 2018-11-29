@@ -7,6 +7,8 @@ const userSchema = new Schema({
   name: String,
   surname: String,
   latitude: Number,
+  // rating:, 
+  // tabla:,
   longitude: Number,
   description: String,
   genre: {type: Number, enum: [0, 1, 2]},
