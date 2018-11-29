@@ -3,6 +3,9 @@
 // To execute this seed, run from the root of the project
 // $ node bin/seeds.js
 
+
+
+
 require('dotenv').config();
 const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");
@@ -13,6 +16,7 @@ const School = require("../models/School");
 const axios = require("axios")
 
 const bcryptSalt = 10;
+const salt = bcrypt.genSaltSync(bcryptSalt);
 
 mongoose
   .connect(process.env.DBURL, { useNewUrlParser: true })
@@ -43,22 +47,24 @@ mongoose
 let users = [
   {
     username: `Juan14`,
-    password: `123`,
+    password: bcrypt.hashSync(`123`, salt),
     name: `Juan`,
     surname: `Ibarra`,
-    description: `Soy estudiante de arquitectura, estoy en tercero
-      y tengo experiencia dado clases`,
+    latitude: 40.39224670000001,
+    longitude:-3.6986323,
+    description: `Soy estudiante de arquitectura, estoy en tercero y tengo experiencia dado clases`,
     genre: `1`,
     role: `SOY PROFE`,
     subjects: []
   },
   {
     username: `Pepe`,
-    password: `123`,
-    name: `Juan`,
-    surname: `Ibarra`,
-    description: `Soy estudiante de arquitectura, estoy en tercero
-      y tengo experiencia dado clases`,
+    password: bcrypt.hashSync(`123`, salt),
+    name: `Arturo`,
+    surname: `Perez Reverte`,
+    latitude: 40.389632345907955,
+    longitude:-3.693646617367591,
+    description: `Soy estudiante de arquitectura, estoy en tercero y tengo experiencia dado clases`,
     genre: `1`,
     role: `SOY ALUMNO`,
     subjects: []

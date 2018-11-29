@@ -1,8 +1,9 @@
+require('dotenv').config();
 const mongoose = require("mongoose");
 const Subject = require("../models/Subject");
 
 mongoose
-  .connect('mongodb://localhost/la-pizarra', { useNewUrlParser: true })
+  .connect(process.env.DBURL, { useNewUrlParser: true })
   .then(x => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
   })
@@ -27,9 +28,7 @@ let subjects = [
   },
   {
     title: 'Literatura',
-    description: `Estudio de autores, generos literarios ,
-    lírica y prosa. clases enfocadas a distintos niveles,
-    incluida preparación para EVAU.`,
+    description: `Estudio de autores, generos literarios ,lírica y prosa. clases enfocadas a distintos niveles, incluida preparación para EVAU.`,
     imgPath: 'https://res.cloudinary.com/dbbsyfpl1/image/upload/v1543329896/Subjects/literatura.svg'
   },
   {
@@ -39,25 +38,19 @@ let subjects = [
   },
   {
     title: 'Historia',  
-    description:`Estudio de acotencimientos pasados.
-    Se imparten clases tanto de historia de España como de historia mundial,
-    clases por niveles, incluida preparación para EVAU.`,
-    imgPath:``
+    description:`Estudio de acotencimientos pasados. Se imparten clases tanto de historia de España como de historia mundial, clases por niveles, incluida preparación para EVAU.`,
+    imgPath:`https://res.cloudinary.com/dbbsyfpl1/image/upload/v1543492295/Subjects/library.svg`
   },
   {
-    title: 'Filosofía',
-    description:`Estudio de autores y corrientes filosofícas. 
-    Clases de explicación y repaso, también preparación para EVAU`,
-    imgPath:``
+    title: 'Ajedrez',
+    description:`Clases de ajedrez para todos los niveles, conviertete en un autentico Capablanca!`,
+    imgPath:`https://res.cloudinary.com/dbbsyfpl1/image/upload/v1543492584/Subjects/chess.svg`
   },
     
   {
     title:`Química`,
-    description:`Ciencia que estudia la composición y las propiedades de la materia 
-    y de las transformaciones que esta experimenta
-    sin que se alteren los elementos que la forman.
-    Clases enfocadas a formulación orgánica e inorgánica`,
-    imgPath:``
+    description:`Ciencia que estudia la composición y las propiedades de la materia  y de las transformaciones que esta experimentasin que se alteren los elementos que la forman. Clases enfocadas a formulación orgánica e inorgánica`,
+    imgPath:`https://res.cloudinary.com/dbbsyfpl1/image/upload/v1543329896/Subjects/quimica.svg`
   },
     
   {
@@ -69,32 +62,25 @@ let subjects = [
   {
     title: `Inglés`,
     description:`Clases de vocabulario, verbos regurales e irregulares, redacción y conversacion `,
-    imgPath:``
+    imgPath:`https://res.cloudinary.com/dbbsyfpl1/image/upload/v1543338204/Subjects/language.svg`
   },{
     title: `Lengua`,
-    description:`Clases enfocadas a todos los cursos de la ESO y Bachillerato.
-    Analisis morfológico y sintáctico.`,
+    description:`Clases enfocadas a todos los cursos de la ESO y Bachillerato. Analisis morfológico y sintáctico.`,
     imgPath:`https://res.cloudinary.com/dbbsyfpl1/image/upload/v1543329896/Subjects/lengua.svg`
   },
   {
     title: `Dibujo técnico`,
     description:`Práctica y relosución de ejercicios, especialmente preparacion para EVAU`,
-    imgPath:`https://res.cloudinary.com/dbbsyfpl1/image/upload/v1543329894/Subjects/dibujoTecnico.svgs`
+    imgPath:`https://res.cloudinary.com/dbbsyfpl1/image/upload/v1543329894/Subjects/dibujoTecnico.svg`
   },
 
   {
     title: `Biología`,
-    description:`Ciencia que estudia la estructura de los seres vivos y de sus procesos vitales.
-    Clases enfocadas para todos los cursos y para la EVAU`,
-    imgPath:``
+    description:`Ciencia que estudia la estructura de los seres vivos y de sus procesos vitales. Clases enfocadas para todos los cursos y para la EVAU`,
+    imgPath:`https://res.cloudinary.com/dbbsyfpl1/image/upload/v1543492245/Subjects/dna.svg`
 
   },
-    {
-     title:'',
-     description:'',
-     imgPath:','
-
-    }
+    
 ];
 
 Subject.create(subjects, (err) => {
