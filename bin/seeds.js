@@ -3,9 +3,7 @@
 // To execute this seed, run from the root of the project
 // $ node bin/seeds.js
 
-//Sed ADMON JUNTAR
-
-
+require('dotenv').config();
 const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");
 const User = require("../models/User");
@@ -17,7 +15,7 @@ const axios = require("axios")
 const bcryptSalt = 10;
 
 mongoose
-  .connect('mongodb://localhost/la-pizarra', { useNewUrlParser: true })
+  .connect(process.env.DBURL, { useNewUrlParser: true })
   .then(x => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
   })
@@ -147,7 +145,7 @@ let subjects = [
   {
     title: `Dibujo técnico`,
     description:`Práctica y relosución de ejercicios, especialmente preparacion para EVAU`,
-    imgPath:`https://res.cloudinary.com/dbbsyfpl1/image/upload/v1543329894/Subjects/dibujoTecnico.svgs`,
+    imgPath:`https://res.cloudinary.com/dbbsyfpl1/image/upload/v1543329894/Subjects/dibujoTecnico.svg`,
     type: `Escolar`
   },
 
@@ -180,13 +178,7 @@ let subjects = [
       imgPath:`https://res.cloudinary.com/dbbsyfpl1/image/upload/v1543337717/Subjects/colosseum.svg`,
       type:`Escolar`,
 
-    },{
-      title:``,
-      description:``,
-      imgPath:``,
-      type:``,
-
-    },
+    }
 ];
 
 let meeting = [
