@@ -1,8 +1,9 @@
+require('dotenv').config();
 const mongoose = require("mongoose");
 const Subject = require("../models/Subject");
 
 mongoose
-  .connect('mongodb://localhost/la-pizarra', { useNewUrlParser: true })
+  .connect(process.env.DBURL, { useNewUrlParser: true })
   .then(x => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
   })
@@ -42,13 +43,13 @@ let subjects = [
     description:`Estudio de acotencimientos pasados.
     Se imparten clases tanto de historia de España como de historia mundial,
     clases por niveles, incluida preparación para EVAU.`,
-    imgPath:``
+    imgPath:`https://res.cloudinary.com/dbbsyfpl1/image/upload/v1543338204/Subjects/book.svg`
   },
   {
     title: 'Filosofía',
     description:`Estudio de autores y corrientes filosofícas. 
     Clases de explicación y repaso, también preparación para EVAU`,
-    imgPath:``
+    imgPath:`https://res.cloudinary.com/dbbsyfpl1/image/upload/v1543337369/Subjects/question.svg`
   },
     
   {
@@ -57,7 +58,7 @@ let subjects = [
     y de las transformaciones que esta experimenta
     sin que se alteren los elementos que la forman.
     Clases enfocadas a formulación orgánica e inorgánica`,
-    imgPath:``
+    imgPath:`https://res.cloudinary.com/dbbsyfpl1/image/upload/v1543329896/Subjects/quimica.svg`
   },
     
   {
@@ -69,7 +70,7 @@ let subjects = [
   {
     title: `Inglés`,
     description:`Clases de vocabulario, verbos regurales e irregulares, redacción y conversacion `,
-    imgPath:``
+    imgPath:`https://res.cloudinary.com/dbbsyfpl1/image/upload/v1543338204/Subjects/language.svg`
   },{
     title: `Lengua`,
     description:`Clases enfocadas a todos los cursos de la ESO y Bachillerato.
@@ -79,22 +80,17 @@ let subjects = [
   {
     title: `Dibujo técnico`,
     description:`Práctica y relosución de ejercicios, especialmente preparacion para EVAU`,
-    imgPath:`https://res.cloudinary.com/dbbsyfpl1/image/upload/v1543329894/Subjects/dibujoTecnico.svgs`
+    imgPath:`https://res.cloudinary.com/dbbsyfpl1/image/upload/v1543329894/Subjects/dibujoTecnico.svg`
   },
 
   {
     title: `Biología`,
     description:`Ciencia que estudia la estructura de los seres vivos y de sus procesos vitales.
     Clases enfocadas para todos los cursos y para la EVAU`,
-    imgPath:``
+    imgPath:`https://res.cloudinary.com/dbbsyfpl1/image/upload/v1543338332/Subjects/dna.svg`
 
   },
-    {
-     title:'',
-     description:'',
-     imgPath:','
-
-    }
+    
 ];
 
 Subject.create(subjects, (err) => {
