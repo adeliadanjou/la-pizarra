@@ -8,12 +8,16 @@ const userSchema = new Schema({
   surname: String,
   latitude: Number,
   longitude: Number,
-  description: String,
+  description: {type:String, default: 'Falta la descripción, <br>Este profesor es un vago <br> No lo elijas!! '},
   genre: {type: Number, enum: [0, 1, 2]},
   role: {type: String, enum: ['SOY ALUMNO', 'SOY PROFE', 'ADMON']},
   subjects: Array,
   meetings: Array, //Array de Objetoeventos que aun no hay creados
   school: String, //CON EL JSON
+  contact: {
+    email: String,
+    phone: Number
+  }
 }, {
   timestamps: {
     createdAt: 'created_at',

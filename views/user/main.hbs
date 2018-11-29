@@ -1,16 +1,23 @@
-<nav>
+<nav id="main-nav">
   <ul>
     <li><a href="/">Home</a></li>
     <li><a href="/profile">Perfil</a></li>
   </ul>
 </nav>
 
+<div id="pizarra">
+  <h1> LA PIZARRA DE {{name}}</h1><br>
+  {{#each meetings}}
+  <div id="{{this.status}}" class="meeting">
+    <h3>{{this.title}} </h3>
+    <p>Id: {{this.id}} Cita el día 3</p>
+  </div>
+  {{/each}}
+</div>
 
-{{!-- AMBOS: ID --}}
-<div id="meetings"></div>
 
 
-{{!-- //div con un id que sea escuchado por un java 
+{{!-- //div con un id que sea escuchado por un java
 <h1>Lista de citas</h1>
 <p>gris-pendiente</p>
 <p>verde-confirmada</p>
@@ -20,11 +27,14 @@
 PROBAR CUANDO HAYA EVENTOS meter un partial de event, de un array de User Event--}}
 <h2 class="Prueba">Pide cita: {{id}}</h2>
 
+<div id="form-meeting" class="off">
 <form action="/user/main/{{id}}" method="POST">
   <label>Título</label><br>
   <input type="text" name="title"><br><br>
-  <button type="submit" id="addMeeting" >Hacer petición</button>
+  <button type="submit" id="addMeeting">Hacer petición</button>
 </form>
+</div>
+
 
 {{!-- SOLO PARA PUPILS --}}
 <h1>Encuentra a tu profe</h1>
@@ -35,9 +45,13 @@ PROBAR CUANDO HAYA EVENTOS meter un partial de event, de un array de User Event-
 </div>
 
 
+
+
 <script>
   window.teacherList = {{{teacherStr}}}
 </script>
 
-<script src="/javascripts/addMeeting.js"></script>
+
+{{!-- <script src="/javascripts/addMeeting.js"></script> --}}
 <script src="/javascripts/listTeacherMap.js"></script>
+{{!-- <script src="/javascripts/buttonMap.js"></script> --}}

@@ -22,6 +22,9 @@
 $background: #2B3A42;
 $tiza: #f0f0df;
 $extra: #ff8f00; //hover lighten 30
+$pending: #BDD3DE;
+$confirmed: #ABD100;
+$done: lingthen($extra, 20);
 
 * {
   box-sizing: border-box;
@@ -124,14 +127,59 @@ li {
   letter-spacing: 4px;
   line-height: 1.6rem;
 }
-#meetings {
-  background-color: #2B3A42;
-}
 .prueba h2{
   color: #2B3A42;
 }
 
+#main-nav {
+  background-color: $extra;
+  color: #f0f0df;
+  height: 100px;
+}
+#main-nav {
+  display: flex;
+  justify-content: right;
+}
+#main-nav ul li a{
+  text-align: right;
+  font: 26px "MARKUS";
+  color: $tiza;
+}
+#pizarra {
+  background-color: #2B3A42;
+  border-radius: 4px;
+  width: 80%;
+  margin: 0 auto;
+  //height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 3%;
+  
+  align-content: left;
+  justify-content: left;
+}
+#pending {
+  background-color: $pending;
+  width: 30%;
+}
+.meeting {
+  border-radius: 4px;
+  margin: 1%;
+}
 
+.infoMaps h1 {
+  color: #2B3A42;
+}
+.infoMaps p {
+  color: #2B3A42;
+}
+// .infoMaps a{
+  
+// }
+// #goToAddMeet {
+//   color: #007BFF;
+//   font-size: 2.2rem;
+// }
 
 #map {
   height: 300px; 
