@@ -7,6 +7,8 @@ const userSchema = new Schema({
   name: String,
   surname: String,
   latitude: Number,
+  // rating:, 
+  // tabla:,
   longitude: Number,
   description: {type:String, default: 'Falta la descripción, <br>Este profesor es un vago <br> No lo elijas!! '},
   genre: {type: Number, enum: [0, 1, 2]},

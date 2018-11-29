@@ -118,8 +118,9 @@ section {
   width: 40%;
 }
 #multi-img{
-  width: 20%;
-  flex-flow: row no-wrap;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
 }
 
 li {

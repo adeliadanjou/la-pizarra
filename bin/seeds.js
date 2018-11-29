@@ -165,15 +165,13 @@ let subjects = [
   },
     {
      title:`Matemáticas`,
-     description:`Clases para todos los niveles de mates,
-     preparacion para la EVAU para ciencias y letras`,
+     description:`Clases para todos los niveles de mates,preparacion para la EVAU para ciencias y letras`,
      imgPath:'https://res.cloudinary.com/dbbsyfpl1/image/upload/v1543329894/Subjects/mates.svg',
      type: `Escolar`
     },
     {
       title:`Griego`,
-      description:`Estudio de lenguas muertas. 
-      Tambien podras encontrar a profesores para griego!`,
+      description:`Estudio de lenguas muertas. Tambien podras encontrar a profesores para griego!`,
       imgPath:`https://res.cloudinary.com/dbbsyfpl1/image/upload/v1543337547/Subjects/museum.svg`,
       type:`Escolar`,
     },

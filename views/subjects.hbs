@@ -1,1 +1,29 @@
+<style>
+ h1 {
+    color: black;
+ } 
+ p {
+   color: black;
+ }
+
+ img {
+   height: 8rem;
+   margin-right: 3rem;
+ }
+
+ .subject {
+   margin: 2rem 0.5rem;
+   display: flex;
+ }
+</style>
+
 <h1>Conoce todas las materias disponibles</h1>
+{{#each subjects}}
+<div class="subject">
+  <img src={{this.imgPath}} alt="">
+  <div>
+    <h1>{{this.title}}</h1>
+    <p>{{this.description}}</p>
+  </div>
+</div>
+{{/each}}
