@@ -161,4 +161,13 @@ li {
 .off {
   display: none; }
 
+.login-block {
+  min-height: 100vh;
+  background-color: #2B3A42;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center; }
+
 /*# sourceMappingURL=style.css.map */
