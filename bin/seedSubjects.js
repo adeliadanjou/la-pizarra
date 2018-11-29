@@ -28,9 +28,7 @@ let subjects = [
   },
   {
     title: 'Literatura',
-    description: `Estudio de autores, generos literarios ,
-    lírica y prosa. clases enfocadas a distintos niveles,
-    incluida preparación para EVAU.`,
+    description: `Estudio de autores, generos literarios ,lírica y prosa. clases enfocadas a distintos niveles, incluida preparación para EVAU.`,
     imgPath: 'https://res.cloudinary.com/dbbsyfpl1/image/upload/v1543329896/Subjects/literatura.svg'
   },
   {
@@ -40,24 +38,18 @@ let subjects = [
   },
   {
     title: 'Historia',  
-    description:`Estudio de acotencimientos pasados.
-    Se imparten clases tanto de historia de España como de historia mundial,
-    clases por niveles, incluida preparación para EVAU.`,
-    imgPath:`https://res.cloudinary.com/dbbsyfpl1/image/upload/v1543338204/Subjects/book.svg`
+    description:`Estudio de acotencimientos pasados. Se imparten clases tanto de historia de España como de historia mundial, clases por niveles, incluida preparación para EVAU.`,
+    imgPath:`https://res.cloudinary.com/dbbsyfpl1/image/upload/v1543492295/Subjects/library.svg`
   },
   {
-    title: 'Filosofía',
-    description:`Estudio de autores y corrientes filosofícas. 
-    Clases de explicación y repaso, también preparación para EVAU`,
-    imgPath:`https://res.cloudinary.com/dbbsyfpl1/image/upload/v1543337369/Subjects/question.svg`
+    title: 'Ajedrez',
+    description:`Clases de ajedrez para todos los niveles, conviertete en un autentico Capablanca!`,
+    imgPath:`https://res.cloudinary.com/dbbsyfpl1/image/upload/v1543492584/Subjects/chess.svg`
   },
     
   {
     title:`Química`,
-    description:`Ciencia que estudia la composición y las propiedades de la materia 
-    y de las transformaciones que esta experimenta
-    sin que se alteren los elementos que la forman.
-    Clases enfocadas a formulación orgánica e inorgánica`,
+    description:`Ciencia que estudia la composición y las propiedades de la materia  y de las transformaciones que esta experimentasin que se alteren los elementos que la forman. Clases enfocadas a formulación orgánica e inorgánica`,
     imgPath:`https://res.cloudinary.com/dbbsyfpl1/image/upload/v1543329896/Subjects/quimica.svg`
   },
     
@@ -73,8 +65,7 @@ let subjects = [
     imgPath:`https://res.cloudinary.com/dbbsyfpl1/image/upload/v1543338204/Subjects/language.svg`
   },{
     title: `Lengua`,
-    description:`Clases enfocadas a todos los cursos de la ESO y Bachillerato.
-    Analisis morfológico y sintáctico.`,
+    description:`Clases enfocadas a todos los cursos de la ESO y Bachillerato. Analisis morfológico y sintáctico.`,
     imgPath:`https://res.cloudinary.com/dbbsyfpl1/image/upload/v1543329896/Subjects/lengua.svg`
   },
   {
@@ -85,9 +76,8 @@ let subjects = [
 
   {
     title: `Biología`,
-    description:`Ciencia que estudia la estructura de los seres vivos y de sus procesos vitales.
-    Clases enfocadas para todos los cursos y para la EVAU`,
-    imgPath:`https://res.cloudinary.com/dbbsyfpl1/image/upload/v1543338332/Subjects/dna.svg`
+    description:`Ciencia que estudia la estructura de los seres vivos y de sus procesos vitales. Clases enfocadas para todos los cursos y para la EVAU`,
+    imgPath:`https://res.cloudinary.com/dbbsyfpl1/image/upload/v1543492245/Subjects/dna.svg`
 
   },
     
