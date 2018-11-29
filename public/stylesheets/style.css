@@ -1,9 +1,119 @@
+@font-face {
+  font-family: "VTKS";
+  src: url(typo/VTKS.ttf) format("truetype"); }
+
+@font-face {
+  font-family: "MARKUS";
+  src: url(typo/MARKUS.ttf) format("truetype"); }
+
+@font-face {
+  font-family: "QH";
+  src: url(typo/QH.ttf) format("truetype"); }
+
+@font-face {
+  font-family: "SYMPO";
+  src: url(typo/SYMPO.otf) format("truetype"); }
+
+* {
+  box-sizing: border-box; }
+
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
+  font: 26px "MARKUS", Helvetica, Arial, sans-serif;
+  background-color: #f0f0df;
+  color: #f0f0df; }
+
+h1 {
+  font-family: "MARKUS";
+  font-size: 3.2rem;
+  letter-spacing: 14px; }
+
+h2 {
+  font-family: "SYMPO";
+  font-size: 30px;
+  letter-spacing: 4px; }
+
+h3 {
+  font-size: 2.8rem;
+  letter-spacing: 3px;
+  color: #ff8f00; }
 
 a {
-  color: #00B7FF; }
+  font-family: "SYMPO";
+  color: darken #ff8f00, 20; }
+
+button {
+  font-family: "MARKUS";
+  background: #ff8f00;
+  cursor: pointer;
+  height: 100px;
+  width: 150px;
+  font-size: 2.2rem;
+  letter-spacing: 0.2rem;
+  border-radius: 4px;
+  color: #f0f0df; }
+
+button:hover {
+  background: #995600; }
+
+header {
+  background-color: #2B3A42;
+  height: 200px; }
+
+.center {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-around; }
+
+.img-text {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center; }
+
+.img-text img {
+  height: 60%; }
+
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -30px;
+  margin-bottom: 30px; }
+
+section {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1rem; }
+
+#info {
+  background-color: #2B3A42;
+  width: 50%;
+  letter-spacing: 4px;
+  padding: 5%; }
+
+#subjects {
+  width: 40%; }
+
+#multi-img {
+  width: 20%;
+  flex-flow: row no-wrap; }
+
+li {
+  font-size: 1.2rem;
+  letter-spacing: 4px;
+  line-height: 1.6rem; }
+
+#meetings {
+  background-color: #2B3A42; }
+
+.prueba h2 {
+  color: #2B3A42; }
 
 #map {
   height: 300px; }
