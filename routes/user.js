@@ -7,22 +7,32 @@ const { ensureLoggedIn, ensureLoggedOut } = require('connect-ensure-login');
 
 router.get('/user/main', ensureLoggedIn(), (req, res) => {
   const id = req.user.id;
+  const name = req.user.name;
+
   User.find({ role: 'SOY PROFE' })
     .then(teacherList => {
-      //console.log(teacherList, 'Lista de teachhhheeeerssss ');
-      //console.log(JSON.stringify(teacherList),'lo mismo pero JSOneado')
-      console.log(id, 'Renderiza bien el id ')
-
-      res.render('user/main', {
-        
-        id,
-        teacherStr: JSON.stringify(teacherList)
-      });
+      Meeting.find({ teacher: id })
+        .then(meetings => {
+          console.log(meetings)
+          console.log(id, 'Renderiza bien el id ')
+          console.log(teacherList)
+          res.render('user/main', {
+            id,
+            name,
+            meetings,
+            teacherStr: JSON.stringify(teacherList)
+    
+          });
+        })
+        .catch(err => {
+          res.render("user/main", { message: "Something went wrong" });
+        })
     })
-    .catch(err => {
-      res.render("user/main", { message: "Something went wrong" });
-    })
 
+});
+
+router.get('/user/addEvent', (req, res, next) => {
+  res.render('user/addEvent');
 });
 
 router.post("/user/main/:id", (req, res, next) => {
@@ -52,15 +62,6 @@ router.post("/user/main/:id", (req, res, next) => {
 });
 
 
-// //LISTADO DE EVENTOS
-// router.get('/', (req, res, next) => {
-//   Restaurant.find().then( restaurants => {
-//     res.render('restaurant/list', {
-//       restaurants,
-//       restStr: JSON.stringify(restaurants)
-//     });
-//   }).catch(e=> next(e));
-// });
 
 
 module.exports = router;

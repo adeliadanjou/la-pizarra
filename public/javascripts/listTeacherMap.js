@@ -35,30 +35,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
           infowindow.setContent(`<div class="infoMaps">
           <h1>${teacher.name}</h1>
-          <p>djfhaksdjfhalkfhkdsjfhksdjfhasdfhdfjhsdakfjh
-          kasdjfhaksjdhfkasdjhfkljsdhfkjadshfdhjksdhjksfkasd
-          afbasd,mfbasdkljfhdfjhadjkshfadhjsaksñdhfñkashf
-          cjbsdlkjfasdljfgskjfgksaljdgfklsjagfkjgañdjsfhisa</p>
-          <h3>66114204</h3>
-          <a href="">Pide cita</a>
+          <p>${teacher.description}</p>
+          <a href="/user/addEvent">Pide cita!!</a>
           </div>`);
           infowindow.setOptions({ maxWidth: 200 });
           infowindow.open(teachersMap, marker);
         }
-      })(marker));
+      })(marker))
 
-
-
-      // marker.addListener('click', function() {
-      //   infowindow.open(teachersMap, marker);
-      // });
     })
 
   });
-
-
-
-
 
 
 

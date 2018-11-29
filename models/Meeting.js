@@ -15,11 +15,7 @@ const meetingSchema = new Schema({
   genre: {type: Number, enum: [0, 1, 2]},
   //subject: {type: new Schema.type.ObjectId, ref: 'Subject'},
 
-  status: {
-    pending: {type: Boolean, default: true},
-    confirmed: {type: Boolean, default: false},
-    done: {type: Boolean, default: false}
-  }
+  status: {type: String, enum: ['pending', 'confirmed', 'done'], default: 'pending'},
 
 });
 
