@@ -183,7 +183,11 @@ li {
 // }
 
 #map {
-  height: 300px; 
+  height: 500px; 
+  width: 700px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 #teachersMap {
   height: 300px; 
@@ -201,4 +205,22 @@ li {
    flex-direction: column;
    text-align: center;
  
+ }
+.singup{
+   min-height: 100vh;
+   background-color: #2B3A42;
+   align-items: center;
+   justify-content: center;
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+ }  
+
+ .borderbox{
+  box-sizing: border-box;
+  width: 50%;
+  border: 5px solid  #f0f0df;
+  border-radius: 8px;
+  float: left;
+  
  }

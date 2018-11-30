@@ -69,6 +69,7 @@ let users = [
     role: `SOY PROFE`,
     subjects: []
   },
+  
   {
     username: `Pepe`,
     password: bcrypt.hashSync(`123`, salt),

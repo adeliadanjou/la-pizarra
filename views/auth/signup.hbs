@@ -1,17 +1,21 @@
-<h2>Signup</h2>
-
-<p class="account-message">
+<div class="singup">
+<div class="borderbox">
+  <h2>Signup</h2>
+  <p class="account-message">
   Do you already have an account?
   <a href="/login">Login</a>
 </p>
 <br>
+</div>
+
 {{#if message }}
 <div class="error-message">{{ message }}</div>
 {{/if}}
 <br>
 <hr><br>
 
-<form action="/signup" method="POST" id="form-container">
+<div class="boderbox">
+  <form action="/signup" method="POST" id="form-container">
 
   <div id="first">
     <label for="username">Nombre de usuario</label>
@@ -54,7 +58,7 @@
 
 
     {{!-- <input type="button" name="next" class="next action-button" value="Next" /> --}}
-    <label>Indica tu posición aproximada</label>
+    <br><label>Indica tu posición aproximada</label>
     <input id="lat-pos" type="hidden" name="latitude" placeholder="Latitude">
     <input id="lng-pos" type="hidden" name="longitude" placeholder="Longitude">
     <div id="map"></div>
@@ -66,8 +70,10 @@
 </form>
 <script src="/javascripts/addLocation.js"></script>
 </div>
-
+</div>
 
 
 </form>
 <script src="/javascripts/button.js"></script>
+</div>
+</div>
