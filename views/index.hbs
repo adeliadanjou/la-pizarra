@@ -13,8 +13,14 @@
 </header>
 
 <nav>
+  {{#if session}}
+  <a href="/logout"><button><span>logout</span></button></a>
+  <a href="/user/main">Go!</a>
+  {{else}}
   <a href="/login"><button><span>login</span></button></a>
   <a href="/signup">o Regístrate..</a>
+  {{/if}}
+  
 </nav>
 
 <section>

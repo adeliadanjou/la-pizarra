@@ -46,10 +46,16 @@ h2 {
   letter-spacing: 4px;
 }
 h3{
-  font-size: 2.8rem;
+  font-size: 1.8rem;
   letter-spacing: 3px;
   color: #ff8f00;
 }
+#info h3{
+  font-size: 3.2rem;
+  letter-spacing: 4px;
+  color: #ff8f00;
+}
+
 a {
   font-family: "SYMPO";
   color: darken ($extra, 20);
@@ -136,16 +142,24 @@ li {
   background-color: $extra;
   color: #f0f0df;
   height: 100px;
-}
-#main-nav {
   display: flex;
-  justify-content: right;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 10%;
+  margin-bottom: 3%;
 }
-#main-nav ul li a{
-  text-align: right;
-  font: 26px "MARKUS";
-  color: $tiza;
+
+
+#main-nav a{
+  margin:3%;
+  font-size: 2.3rem;
+  // font: 26px "MARKUS";
+  // color: $tiza;
 }
+// #main-container {
+//   height: 90%;
+  
+// }
 #pizarra {
   background-color: #2B3A42;
   border-radius: 4px;
@@ -166,6 +180,7 @@ li {
 .meeting {
   border-radius: 4px;
   margin: 1%;
+  padding: 2%;
 }
 
 .infoMaps h1 {
@@ -181,14 +196,144 @@ li {
 //   color: #007BFF;
 //   font-size: 2.2rem;
 // }
+#pupil {
+  width: 80%;
+  background-color: #2B3A42;
+  border-radius: 4px;
+  margin: 0 auto;
+  display: flex;
+  padding: 3%;
+  margin-bottom: 3%;
+  justify-content: space-around;
+}
+#filtro{
+ width: 30%;
+}
+
+//SIGNUP
+
+#signup-pre-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#signup-container {
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+  // flex-wrap: wrap;
+  flex-direction: column;
+  background-color: #2b3a42;
+  margin: 1%;
+  //padding: 3% 3%;
+  width: 30vw;
+  height: 70vh;
+}
+
+#form-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+// #first {
+//   display: flex;
+//   flex-wrap: wrap;
+//   flex-direction: column;
+//   justify-content: space-around;
+//   align-items: center;
+//   width: 100%;
+// }
+
+#alumno {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+select {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  margin-bottom: 25px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.chico{
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+::-webkit-input-placeholder {
+  color: #808080;
+  text-align: center;
+
+}
+
+:-moz-placeholder {
+  color: #808080;
+  text-align: center;
+
+}
 
 #map {
-  height: 300px; 
+  height: 250px;
+  width: 250px; 
 }
 #teachersMap {
   height: 300px; 
+  width: 500px; 
+  border-radius: 4px;
+}
+
+.action-button {
+  background-color: #ff8f00;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#first .off {
+  display: none;
 }
 
 .off {
   display: none;
 }
+#second{
+  width: 80%;
+}
+#second-second{
+  display: flex;
+  flex-direction: column;
+}
+
+#input-subject{
+  width: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+#check {
+  width: 30%;
+  display: flex;
+  justify-content: space-around;
+}
+
