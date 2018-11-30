@@ -250,6 +250,7 @@ input {
 .off {
   display: none; }
 
+<<<<<<< HEAD
 #second {
   width: 80%; }
 
@@ -268,5 +269,15 @@ input {
   width: 30%;
   display: flex;
   justify-content: space-around; }
+=======
+.login-block {
+  min-height: 100vh;
+  background-color: #2B3A42;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center; }
+>>>>>>> 775975e10a48b510d7ceae068029fb4e9da77013
 
 /*# sourceMappingURL=style.css.map */

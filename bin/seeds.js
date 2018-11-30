@@ -58,6 +58,18 @@ let users = [
     subjects: []
   },
   {
+    username: `Carmen`,
+    password: bcrypt.hashSync(`123`, salt),
+    name: `Carmen`,
+    surname: `Ibarra`,
+    latitude: 40.39224670000001,
+    longitude:-3.6986323,
+    description: `Soy estudiante de arquitectura, estoy en tercero y tengo experiencia dado clases`,
+    genre: `1`,
+    role: `SOY PROFE`,
+    subjects: []
+  },
+  {
     username: `Pepe`,
     password: bcrypt.hashSync(`123`, salt),
     name: `Arturo`,
