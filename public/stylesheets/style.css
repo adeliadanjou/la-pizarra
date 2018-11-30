@@ -147,6 +147,10 @@ li {
   background-color: #BDD3DE;
   width: 30%; }
 
+#confirmed {
+  background-color: #ABD100;
+  width: 30%; }
+
 .meeting {
   border-radius: 4px;
   margin: 1%;
@@ -246,6 +250,32 @@ input {
 .off {
   display: none; }
 
+<<<<<<< HEAD
+=======
+#second {
+  width: 80%; }
+
+#second-second {
+  display: flex;
+  flex-direction: column;
+  width: 80%; }
+
+#input-subject {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap; }
+
+#check {
+  width: 30%;
+  display: flex;
+  justify-content: space-around; }
+<<<<<<< HEAD
+=======
+
+>>>>>>> Carmen
+>>>>>>> 13ebf46c0042337ee0515b40d8dabeb775d2f812
 .login-block {
   min-height: 100vh;
   background-color: #2B3A42;
@@ -254,6 +284,7 @@ input {
   display: flex;
   flex-direction: column;
   text-align: center; }
+<<<<<<< HEAD
 
 .signup {
   min-height: 100vh;
@@ -270,5 +301,7 @@ input {
   border: 5px solid  #f0f0df;
   border-radius: 8px;
   float: left; }
+=======
+>>>>>>> Carmen
 
 /*# sourceMappingURL=style.css.map */

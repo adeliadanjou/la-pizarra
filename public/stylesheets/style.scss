@@ -177,6 +177,10 @@ li {
   background-color: $pending;
   width: 30%;
 }
+#confirmed {
+  background-color: $confirmed;
+  width: 30%;
+}
 .meeting {
   border-radius: 4px;
   margin: 1%;
@@ -318,6 +322,29 @@ input {
 .off {
   display: none;
 }
+#second{
+  width: 80%;
+}
+#second-second{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+#input-subject{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+#check {
+  width: 30%;
+  display: flex;
+  justify-content: space-around;
+}
+
  .login-block{
    min-height: 100vh;
    background-color: #2B3A42;
@@ -347,3 +374,4 @@ input {
   float: left;
   
  }
+
