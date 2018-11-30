@@ -147,6 +147,10 @@ li {
   background-color: #BDD3DE;
   width: 30%; }
 
+#confirmed {
+  background-color: #ABD100;
+  width: 30%; }
+
 .meeting {
   border-radius: 4px;
   margin: 1%;
@@ -255,10 +259,11 @@ input {
 
 #second-second {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  width: 80%; }
 
 #input-subject {
-  width: 100;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -268,6 +273,10 @@ input {
   width: 30%;
   display: flex;
   justify-content: space-around; }
+<<<<<<< HEAD
+=======
+
+>>>>>>> Carmen
 .login-block {
   min-height: 100vh;
   background-color: #2B3A42;
@@ -276,6 +285,7 @@ input {
   display: flex;
   flex-direction: column;
   text-align: center; }
+<<<<<<< HEAD
 
 .singup {
   min-height: 100vh;
@@ -292,5 +302,7 @@ input {
   border: 5px solid  #f0f0df;
   border-radius: 8px;
   float: left; }
+=======
+>>>>>>> Carmen
 
 /*# sourceMappingURL=style.css.map */
