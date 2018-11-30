@@ -147,6 +147,10 @@ li {
   background-color: #BDD3DE;
   width: 30%; }
 
+#confirmed {
+  background-color: #ABD100;
+  width: 30%; }
+
 .meeting {
   border-radius: 4px;
   margin: 1%;
@@ -250,16 +254,16 @@ input {
 .off {
   display: none; }
 
-<<<<<<< HEAD
 #second {
   width: 80%; }
 
 #second-second {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  width: 80%; }
 
 #input-subject {
-  width: 100;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -269,7 +273,7 @@ input {
   width: 30%;
   display: flex;
   justify-content: space-around; }
-=======
+
 .login-block {
   min-height: 100vh;
   background-color: #2B3A42;
@@ -278,6 +282,5 @@ input {
   display: flex;
   flex-direction: column;
   text-align: center; }
->>>>>>> 775975e10a48b510d7ceae068029fb4e9da77013
 
 /*# sourceMappingURL=style.css.map */

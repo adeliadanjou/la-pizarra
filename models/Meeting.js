@@ -5,7 +5,7 @@ const meetingSchema = new Schema({
   pupil: {type: Schema.Types.ObjectId, ref: 'User'},
   teacher: {type: Schema.Types.ObjectId, ref: 'User'},
   title: String,
-  date: Date, 
+  date: String, 
   hour: String,
   contact: {
     email: String,

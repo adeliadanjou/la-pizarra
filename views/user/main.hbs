@@ -11,12 +11,14 @@
     <h3>{{this.title}} </h3>
     <p>{{this.date}}</p>
     <p>{{this.status}}</p>
+    <p>{{../role}}</p>
 
-    {{#ifProfeAndPending role meetings.status}}
-    <button id="confirm">ACEPTAR SOLICITUD</button>
-    {{!-- {{else}}
-    no lo saco --}}
-    {{/ifProfeAndPending}}
+    <form action="/confirm/{{this.id}}" method="POST">
+      {{#ifProfeAndPending ../role this.status}}
+      <button id="confirm">ACEPTAR SOLICITUD</button>
+      {{/ifProfeAndPending}}
+    </form>
+
     {{!-- {{#ifEqual this.status 'pending'}}
     {{#ifEqual role 'SOY PROFE'}}
 
@@ -40,20 +42,23 @@
       <option value="USD">USD</option>
       <option value="EUR">EUR</option>
     </select> --}}
-    <select name="subject" id="subject">
-      <option value="Física">Física</option>
-      <option value="Geografía">Geografía</option>
-      <option value="Literatura">Literatura</option>
-      <option value="Guitarra">Guitarra</option>
-      <option value="Historia">Historia</option>
-      <option value="Ajedrez">Ajedrez</option>
-      <option value="Química">Química</option>
-      <option value="Economía">Economía</option>
-      <option value="Inglés">Inglés</option>
-      <option value="Lengua">Lengua</option>
-      <option value="Dibujo técnico">Dibujo técnico</option>
-      <option value="Biología">Biología</option>
-    </select>
+    <form action="/user/main" method="POST">
+      <select name="subjects">
+        <option value="Física" name="Física">Física</option>
+        <option value="Geografía" name="Geografía">Geografía</option>
+        <option value="Literatura" name="Literatura">Literatura</option>
+        <option value="Guitarra" name="Guitarra">Guitarra</option>
+        <option value="Historia" name="Historia">Historia</option>
+        <option value="Ajedrez" name="Ajedrez">Ajedrez</option>
+        <option value="Química" name="Química">Química</option>
+        <option value="Economía" name="Economía">Economía</option>
+        <option value="Inglés" name="Inglés">Inglés</option>
+        <option value="Lengua" name="Lengua">Lengua</option>
+        <option value="Dibujo técnico" name="Dibujo técnico">Dibujo técnico</option>
+        <option value="Biología" name="Biología">Biología</option>
+      </select>
+      <button type="submit">Filtra</button>
+    </form>
 
   </div>
   <div id="teachersMap"></div>
