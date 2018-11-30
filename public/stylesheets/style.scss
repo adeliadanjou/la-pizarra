@@ -212,25 +212,22 @@ li {
 
 //SIGNUP
 
-#signup-pre-container {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
+// #signup-pre-container {
+//   width: 100vw;
+//   height: 100vh;
+//   display: flex;
+//   justify-content: space-around;
+//   align-items: center;
+// }
 
 #signup-container {
-  justify-content: space-around;
-  align-items: center;
-  display: flex;
-  // flex-wrap: wrap;
-  flex-direction: column;
-  background-color: #2b3a42;
-  margin: 1%;
-  //padding: 3% 3%;
-  width: 30vw;
-  height: 70vh;
+  min-height: 100vh;
+   background-color: #2B3A42;
+   align-items: center;
+   justify-content: center;
+   display: flex;
+   flex-direction: column;
+   text-align: center;
 }
 
 #form-container {
@@ -241,6 +238,7 @@ li {
   justify-content: space-around;
   align-items: center;
 }
+
 
 // #first {
 //   display: flex;
@@ -273,6 +271,11 @@ input {
   text-align: center;
 }
 
+#input-subject {
+  display: flex;
+  flex-direction: row;
+
+}
 .chico{
   
   display: flex;
@@ -315,30 +318,6 @@ input {
 .off {
   display: none;
 }
-<<<<<<< HEAD
-#second{
-  width: 80%;
-}
-#second-second{
-  display: flex;
-  flex-direction: column;
-}
-
-#input-subject{
-  width: 100;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: nowrap;
-}
-
-#check {
-  width: 30%;
-  display: flex;
-  justify-content: space-around;
-}
-
-=======
  .login-block{
    min-height: 100vh;
    background-color: #2B3A42;
@@ -349,8 +328,8 @@ input {
    text-align: center;
  
  }
-<<<<<<< HEAD
-.singup{
+
+.signup{
    min-height: 100vh;
    background-color: #2B3A42;
    align-items: center;
@@ -368,6 +347,3 @@ input {
   float: left;
   
  }
-=======
->>>>>>> 775975e10a48b510d7ceae068029fb4e9da77013
->>>>>>> 833234bf2b93d4e6d5da7d3fe949de14e6bfe70e

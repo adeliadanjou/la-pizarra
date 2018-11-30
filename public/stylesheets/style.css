@@ -171,22 +171,14 @@ li {
 #filtro {
   width: 30%; }
 
-#signup-pre-container {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: space-around;
-  align-items: center; }
-
 #signup-container {
-  justify-content: space-around;
+  min-height: 100vh;
+  background-color: #2B3A42;
   align-items: center;
+  justify-content: center;
   display: flex;
   flex-direction: column;
-  background-color: #2b3a42;
-  margin: 1%;
-  width: 30vw;
-  height: 70vh; }
+  text-align: center; }
 
 #form-container {
   width: 100%;
@@ -215,6 +207,10 @@ input {
   justify-content: center;
   align-items: center;
   text-align: center; }
+
+#input-subject {
+  display: flex;
+  flex-direction: row; }
 
 .chico {
   display: flex;
@@ -250,24 +246,6 @@ input {
 .off {
   display: none; }
 
-#second {
-  width: 80%; }
-
-#second-second {
-  display: flex;
-  flex-direction: column; }
-
-#input-subject {
-  width: 100;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: nowrap; }
-
-#check {
-  width: 30%;
-  display: flex;
-  justify-content: space-around; }
 .login-block {
   min-height: 100vh;
   background-color: #2B3A42;
@@ -277,7 +255,7 @@ input {
   flex-direction: column;
   text-align: center; }
 
-.singup {
+.signup {
   min-height: 100vh;
   background-color: #2B3A42;
   align-items: center;
