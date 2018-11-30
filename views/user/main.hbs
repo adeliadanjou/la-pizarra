@@ -1,50 +1,64 @@
-<nav id="main-nav">
-  <ul>
-    <li><a href="/">Home</a></li>
-    <li><a href="/profile">Perfil</a></li>
-  </ul>
-</nav>
+<div id="main-nav">
+  <a href="/">Home</a>
+  <a href="/profile">Perfil</a>
+</div>
+
 
 <div id="pizarra">
   <h1> LA PIZARRA DE {{name}}</h1><br>
   {{#each meetings}}
   <div id="{{this.status}}" class="meeting">
     <h3>{{this.title}} </h3>
-    <p>Id: {{this.id}} Cita el día 3</p>
+    <p>{{this.date}}</p>
+    <p>{{this.status}}</p>
+
+    {{#ifProfeAndPending role meetings.status}}
+    <button id="confirm">ACEPTAR SOLICITUD</button>
+    {{!-- {{else}}
+    no lo saco --}}
+    {{/ifProfeAndPending}}
+    {{!-- {{#ifEqual this.status 'pending'}}
+    {{#ifEqual role 'SOY PROFE'}}
+
+    {{/ifEqual}}
+    {{/ifEqual}} --}}
   </div>
   {{/each}}
 </div>
-
-
-
-{{!-- //div con un id que sea escuchado por un java
-<h1>Lista de citas</h1>
-<p>gris-pendiente</p>
-<p>verde-confirmada</p>
-<p>rojo-pasada</p> --}}
-
-{{!-- {{#if eventos}}
-PROBAR CUANDO HAYA EVENTOS meter un partial de event, de un array de User Event--}}
-<h2 class="Prueba">Pide cita: {{id}}</h2>
-
-<div id="form-meeting" class="off">
-<form action="/user/main/{{id}}" method="POST">
-  <label>Título</label><br>
-  <input type="text" name="title"><br><br>
-  <button type="submit" id="addMeeting">Hacer petición</button>
-</form>
-</div>
-
-
+{{!-- En principio no necesito id
+<h2 class="Prueba">Pide cita: {{id}}</h2> --}}
+<br>
 {{!-- SOLO PARA PUPILS --}}
-<h1>Encuentra a tu profe</h1>
+{{#ifEqual role 'SOY PROFE'}}
+<h1>soy profee</h1>
+{{else}}
 <div id="pupil">
-  <div id="teachersMap"></div>
-  <div id="form-meeting">
+  <div id="filtro">
+    <h1>Encuentra a tu profe</h1>
+    <div id="form-meeting"></div>
+    {{!-- <select name="currency" id="selectCurrency">
+      <option value="USD">USD</option>
+      <option value="EUR">EUR</option>
+    </select> --}}
+    <select name="subject" id="subject">
+      <option value="Física">Física</option>
+      <option value="Geografía">Geografía</option>
+      <option value="Literatura">Literatura</option>
+      <option value="Guitarra">Guitarra</option>
+      <option value="Historia">Historia</option>
+      <option value="Ajedrez">Ajedrez</option>
+      <option value="Química">Química</option>
+      <option value="Economía">Economía</option>
+      <option value="Inglés">Inglés</option>
+      <option value="Lengua">Lengua</option>
+      <option value="Dibujo técnico">Dibujo técnico</option>
+      <option value="Biología">Biología</option>
+    </select>
+
   </div>
+  <div id="teachersMap"></div>
 </div>
-
-
+{{/ifEqual}}
 
 
 <script>
@@ -52,6 +66,8 @@ PROBAR CUANDO HAYA EVENTOS meter un partial de event, de un array de User Event-
 </script>
 
 
-{{!-- <script src="/javascripts/addMeeting.js"></script> --}}
+{{!--
+<script src="/javascripts/addMeeting.js"></script> --}}
 <script src="/javascripts/listTeacherMap.js"></script>
-{{!-- <script src="/javascripts/buttonMap.js"></script> --}}
+{{!--
+<script src="/javascripts/buttonMap.js"></script> --}}

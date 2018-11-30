@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
           infowindow.setContent(`<div class="infoMaps">
           <h1>${teacher.name}</h1>
           <p>${teacher.description}</p>
-          <a href="/user/addEvent">Pide cita!!</a>
+          <a href="/user/addEvent/${teacher._id}">Pide cita!!</a>
           </div>`);
           infowindow.setOptions({ maxWidth: 200 });
           infowindow.open(teachersMap, marker);

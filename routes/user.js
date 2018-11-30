@@ -8,6 +8,7 @@ const { ensureLoggedIn, ensureLoggedOut } = require('connect-ensure-login');
 router.get('/user/main', ensureLoggedIn(), (req, res) => {
   const id = req.user.id;
   const name = req.user.name;
+  const role = req.user.role;
 
   User.find({ role: 'SOY PROFE' })
     .then(teacherList => {
@@ -19,6 +20,7 @@ router.get('/user/main', ensureLoggedIn(), (req, res) => {
           res.render('user/main', {
             id,
             name,
+            role,
             meetings,
             teacherStr: JSON.stringify(teacherList)
     
@@ -31,15 +33,16 @@ router.get('/user/main', ensureLoggedIn(), (req, res) => {
 
 });
 
-router.get('/user/addEvent', (req, res, next) => {
+router.get('/user/addEvent/:id', (req, res, next) => {
+  console.log(req.params.id,'POR EL AMOR DE TEO') 
   res.render('user/addEvent');
 });
 
-router.post("/user/main/:id", (req, res, next) => {
+router.post("/user/addEvent/:id", (req, res, next) => {
 
-  // const { id } = req.params.id;
+  
   // console.log('IDddddddddddddddd',id)
-  // const { password } = req.body;
+   console.log(req.body.date, 'FECHAAAAA DEL EVENTO');
 
   User.findById(req.params.id)
     .then(thisUser => {

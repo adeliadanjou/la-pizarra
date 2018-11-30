@@ -58,6 +58,20 @@ hbs.registerHelper('ifUndefined', (value, options) => {
   }
 });
   
+hbs.registerHelper('ifEqual', function(arg1, arg2, options) {
+  return (arg1 == arg2) ? options.fn(this) : options.inverse(this);
+});
+// hbs.registerHelper('ifEqualDouble', function(arg1, arg2, arg3, arg4, options) {
+//   return (arg1 == arg2 && arg3 === arg4) ? options.fn(this) : options.inverse(this);
+// });
+
+hbs.registerHelper('ifProfeAndPending', function(v1, v2, options) {
+  if(v1 === 'SOY PROFE' && v2 === 'pending') {
+    return options.fn(this);
+  }
+  return options.inverse(this);
+});
+
 
 // default value for title local
 app.locals.title = 'LA PIZARRA';
@@ -73,7 +87,14 @@ app.use(session({
 }))
 app.use(flash());
 require('./passport')(app);
-
+app.use((req, res, next) => {
+  if (req.user) {
+    app.locals.session = req.user;
+  } else {
+    app.locals.session = null;
+  }
+  next();
+  });
     
 app.use('/', require('./routes/index'));
       

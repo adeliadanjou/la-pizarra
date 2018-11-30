@@ -1,1 +1,9 @@
-<h1>Crea una nueva cita</h1>
+<div id="form-meeting">
+<form action="/user/addEvent/{{id}}" method="POST">
+  <label>Título</label><br>
+  <input type="text" name="title"><br><br>
+  <label for="date">Elige fecha</label>
+  <input type="date" name="date" id="startDate">
+  <button type="submit" id="addMeeting">Hacer petición</button>
+</form>
+</div>
